@@ -17,6 +17,7 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul {
   list-style-type: none;
@@ -57,6 +58,22 @@ ul {
 
 section {
   margin: 35px 0;
+}
+
+.fa-facebook {
+  color: #4267b2;
+}
+.fa-twitter {
+  color: #1da1f2;
+}
+.fa-instagram {
+  color: #c13584;
+}
+.fa-pinterest {
+  color: #e60023;
+}
+.fa-youtube {
+  color: #ff0000;
 }
 
 /* # HEADER # */
@@ -111,6 +128,32 @@ header {
   margin-bottom: 15px;
 }
 
+/* # SOCIAL # */
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.social-list li {
+  background-color: white;
+  box-shadow: 0 0 4px 1px #00000022;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.social-list .social-name {
+  display: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 768px) {
   /* UTILITY */
 
@@ -138,6 +181,13 @@ header {
 
   .page-title-suffix {
     display: inline;
+  }
+
+  /* # SOCIAL # */
+
+  .social-list li {
+    flex-grow: 1;
+    border-radius: 1rem;
   }
 }
 
@@ -169,5 +219,11 @@ header {
   .recipe-list li {
     width: auto;
     padding-right: 0;
+  }
+
+  /* # SOCIAL # */
+
+  .social-list .social-name {
+    display: inline;
   }
 }
