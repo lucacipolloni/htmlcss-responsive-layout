@@ -7,10 +7,12 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f6f5f3;
 }
 img {
   max-width: 100%;
+  display: block;
 }
 
 a {
@@ -31,7 +33,6 @@ ul {
 }
 
 .container {
-  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
@@ -52,4 +53,121 @@ ul {
 
 .col {
   width: 100%;
+}
+
+section {
+  margin: 35px 0;
+}
+
+/* # HEADER # */
+
+header {
+  text-align: center;
+  font-size: 2rem;
+  color: #ff9614;
+  background-color: white;
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* # RECIPE PREVIEW # */
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4e3969;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.page-subtitle {
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #999999;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.page-title-suffix {
+  display: none;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 0 4px 1px #00000022;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.recipe-list {
+  margin-top: 1rem;
+}
+
+.recipe-list li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  /* UTILITY */
+
+  .container {
+    max-width: 760px;
+  }
+
+  /* # HEADER # */
+
+  header {
+    text-align: left;
+  }
+
+  /* # RECIPE PREVIEW # */
+
+  .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .recipe-list li {
+    min-width: calc(100% / 3);
+    padding-right: 1rem;
+  }
+
+  .page-title-suffix {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* UTILITY */
+
+  .container {
+    max-width: 980px;
+  }
+
+  /* # RECIPE PREVIEW # */
+
+  .card {
+    display: flex;
+  }
+  .card .card-content {
+    min-width: 300px;
+  }
+
+  .card .card-media {
+    flex-grow: 1;
+  }
+
+  .recipe-list {
+    display: block;
+    flex-wrap: nowrap;
+  }
+
+  .recipe-list li {
+    width: auto;
+    padding-right: 0;
+  }
 }
