@@ -154,6 +154,33 @@ header {
   text-transform: uppercase;
 }
 
+/* # ADVERTISING # */
+.banner-adv {
+  display: none;
+}
+
+/* #RECIPE # */
+
+.recipe-preview {
+  width: 250px;
+  margin: 10px auto;
+}
+
+.recipe-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 0;
+  border-bottom: 2px solid #f7972e;
+  margin-top: 5px;
+}
+
+.recipe-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 @media screen and (min-width: 768px) {
   /* UTILITY */
 
@@ -165,6 +192,7 @@ header {
 
   header {
     text-align: left;
+    margin-left: 15px;
   }
 
   /* # RECIPE PREVIEW # */
@@ -188,6 +216,25 @@ header {
   .social-list li {
     flex-grow: 1;
     border-radius: 1rem;
+  }
+
+  /* # ADVERTISING # */
+
+  .banner-adv {
+    display: block;
+  }
+
+  /* #RECIPE # */
+
+  .recipe-content::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .recipe-preview {
+    float: left;
+    margin-right: 10px;
   }
 }
 
